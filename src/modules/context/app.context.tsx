@@ -18,7 +18,7 @@ function makeContext() {
 		refreshEndpoint: apiRoutes.auth.refresh,
 	});
 	const query = new QueryModule(queryConfig);
-	const person = new PersonModule(query);
+	const person = new PersonModule();
 	const auth = new AuthModule(query, request, store);
 
 	return {
